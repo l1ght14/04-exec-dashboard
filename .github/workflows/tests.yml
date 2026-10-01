@@ -1,6 +1,8 @@
 name: tests
 
 on:
+  # workflow_dispatch so CI can be re-run on demand; the initial gh repo create --push`n  # does not fire Actions, so without this a reviewer sees no checks at all.
+  workflow_dispatch:
   push:
     branches: [main]
   pull_request:
