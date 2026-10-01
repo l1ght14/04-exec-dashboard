@@ -1,0 +1,27 @@
+# Pinned to what the metrics layer and its test suite actually import.
+# Deliberately short: an unpinned analytics requirements.txt is a resume
+# project that cannot be reproduced in six months.
+
+numpy==2.4.1
+pandas==3.0.6
+pytest==8.3.4
+
+# ---------------------------------------------------------------------------
+# NOT installed, NOT needed for the schema or the metrics layer.
+# Both are listed here so the repo is honest about what a dashboard run
+# additionally requires, rather than implying the project is complete.
+# ---------------------------------------------------------------------------
+#
+# Step 1 -- the dashboard layer. Uncomment once sql/ is loadable:
+# duckdb==1.1.3          # runs sql/01_schema.sql and sql/02_metrics.sql
+# plotly==5.24.1         # charts
+# dash==2.18.2           # the app (or streamlit==1.40.0, or Power BI on the CSVs)
+#
+# Step 2 -- to fetch the data. No Kaggle credentials on this machine yet, so
+# the olist CSVs are not in the repo (see .gitignore: data/ and *.csv):
+# kaggle==1.6.17
+#
+# matplotlib and seaborn are installed in the environment but nothing in this
+# layer imports them -- they belong to the ad-hoc EDA notebook, not to the
+# metrics layer, and listing them here would imply a dependency that does not
+# exist.

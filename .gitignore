@@ -1,0 +1,11 @@
+data/
+artifacts/
+*.duckdb
+*.db
+*.csv
+__pycache__/
+.venv/
+venv/
+.ipynb_checkpoints/
+.env
+.DS_Store
