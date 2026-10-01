@@ -25,3 +25,7 @@ pytest==8.3.4
 # layer imports them -- they belong to the ad-hoc EDA notebook, not to the
 # metrics layer, and listing them here would imply a dependency that does not
 # exist.
+
+# dashboard layer -- only src/dashboard/app.py needs these
+streamlit==1.64.0
+plotly==7.1.0
